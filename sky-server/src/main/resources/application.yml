@@ -8,6 +8,13 @@ spring:
     allow-circular-references: true
   datasource:
     druid:
+      # 连接空闲最大时间，单位毫秒，默认60000(60秒)，修改为300000(5分钟)
+      min-evictable-idle-time-millis: 300000
+      # 检测连接是否有效的SQL语句，确保连接可用
+      validation-query: SELECT 1 FROM DUAL
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
       driver-class-name: ${sky.datasource.driver-class-name}
       url: jdbc:mysql://${sky.datasource.host}:${sky.datasource.port}/${sky.datasource.database}?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
       username: ${sky.datasource.username}
