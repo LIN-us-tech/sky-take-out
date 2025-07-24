@@ -8,8 +8,10 @@ spring:
     allow-circular-references: true
   datasource:
     druid:
-      # 连接空闲最大时间，单位毫秒，默认60000(60秒)，修改为300000(5分钟)
-      min-evictable-idle-time-millis: 300000
+      # 连接空闲最大时间，单位毫秒，设置为一个月（30天）
+      min-evictable-idle-time-millis: 2592000000
+      # 连接最大空闲时间，必须大于minEvictableIdleTimeMillis，设置为40天
+      max-evictable-idle-time-millis: 3456000000
       # 检测连接是否有效的SQL语句，确保连接可用
       validation-query: SELECT 1 FROM DUAL
       test-while-idle: true
