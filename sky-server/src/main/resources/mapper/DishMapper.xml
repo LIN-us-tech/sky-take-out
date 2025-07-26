@@ -4,6 +4,9 @@
 <mapper namespace="com.sky.mapper.DishMapper">
 
 
+    <!--useGeneratedKeys="true"：启用数据库自动生成主键功能
+keyProperty="id"：指定将生成的主键值赋给实体对象的 id 属性
+这样在执行插入操作后，数据库生成的主键会自动回填到传入的实体对象的 id 字段中-->
     <insert id="insert" useGeneratedKeys="true" keyProperty="id">
         insert into dish (name,category_id,price, image , description, status,create_time ,update_time,create_user, update_user)
         values (#{name},#{categoryId},#{price}, #{image} , #{description}, #{status},#{createTime} ,#{updateTime},#{createUser}, #{updateUser})

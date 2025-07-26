@@ -4,3 +4,6 @@
 *.class
 *Test.java
 **/test/
+
+# 忽略本地开发配置
+/src/main/resources/application-dev.yml
