@@ -5,3 +5,8 @@
 *Test.java
 **/test/
 
+# 忽略本地开发配置
+**/application-dev.yml
+**/application-local.yml
+**/*.jks
+**/*.p12
