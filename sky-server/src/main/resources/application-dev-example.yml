@@ -11,3 +11,6 @@ sky:
     access-key-id: ${ALIOSS_ACCESS_KEY_ID}
     access-key-secret: ${ALIOSS_ACCESS_KEY_SECRET}
     bucket-name: com-lin-01
+  wechat:
+    appid: wxb36176420af8be01
+    secret: 5de7196f9fbb37930a3689eca7592201
