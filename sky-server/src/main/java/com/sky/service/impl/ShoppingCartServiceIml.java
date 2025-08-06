@@ -66,11 +66,6 @@ public class ShoppingCartServiceIml implements ShoppingCartService {
 
             shoppingCartMapper.insert(shoppingCart);
         }
-
-
-
-
-
     }
 
     /**
